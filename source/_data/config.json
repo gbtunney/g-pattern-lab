@@ -1,0 +1,69 @@
+{
+	"config": {
+		"colors": {
+			"primary": {
+				"Dark": "rgb(30, 30, 30)dddddd",
+				"Light": "rgb(242, 242, 242)"
+			},
+			"secondary": {
+				"Red": "rgb(201, 55, 6)",
+				"Yellow": "rgb(252, 207, 80)",
+				"Blue": "rgb(39, 102, 143)"
+			}
+		},
+		"themes": {
+			"Light": "light",
+			"Dark": "dark",
+			"Form": "form",
+			"Modal": "modal",
+			"Grid Helper": "grid-helper"
+		},
+		"headings": {
+			"component_id": "g_Heading",
+			"modifiers": [
+				"2-font-serif",
+				"trailing-border",
+				"left-border",
+				"3"
+			]
+		}
+	},
+	"typography": {
+		"required-props": "'font-family, letter-spacing, word-spacing, text-transform, text-decoration, font-style, font-weight'",
+		"modularscale": {
+			"base": "20px",
+			"ratio": 1.2,
+			"sm": {
+				"base": "25px",
+				"ratio": 1.2
+			}
+		},
+		"fonts": {
+			"default": {
+				"font-family": "monospace",
+				"text-transform": "none",
+				"text-decoration": "none",
+				"letter-spacing": 0,
+				"word-spacing": 0,
+				"font-weight": "normal",
+				"font-style": "normal"
+			},
+			"font-san-serif": {
+			},
+			"font-serif": {
+			},
+			"font-small-caps": {
+			}
+		}
+	},
+	"slicer": {
+		"breakpoints": "0 480px 768px 992px 1200px",
+		"breakpoint-names": "xs sm md lg"
+	},
+	"paths": {
+		"image-assets": "'./public/images/'",
+		"icons": "'./public/images/icons/'",
+		"patterns": "'./public/images/patterns/'",
+		"fonts": "'./public/fonts'"
+	}
+}

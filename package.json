@@ -5,11 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles": "node-sass --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch source/scss/style.scss source/css/style.css"
+    "styles": "node-sass --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch source/css/style.scss source/css/style.css"
   },
   "author": "Gillian Tunney",
   "license": "ISC",
   "dependencies": {
     "node-sass-json-importer": "^3.3.1"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "breakpoint-slicer": "^2.0.0",
+    "chroma-sass": "^1.2.6",
+    "compass-mixins": "^0.12.10",
+    "modularscale-sass": "^3.0.5",
+    "sass-toolkit": "^2.10.2"
   }
 }

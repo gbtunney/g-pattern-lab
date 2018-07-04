@@ -41,3 +41,8 @@ twigTestExt: test.php
 plugins:
     reload:
         enabled: true
+    dataInheritance:
+        enabled: true
+    faker:
+        enabled: true
+        locale: en_US

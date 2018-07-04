@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles": "sass --watch source/css/style.scss:source/css/style.css"
+    "styles": "node-sass --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch source/scss/style.scss source/css/style.css"
   },
   "author": "Gillian Tunney",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass-json-importer": "^3.3.1"
+  }
 }

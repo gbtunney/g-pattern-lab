@@ -1,16 +1,76 @@
 {
-	"config": {
-		"colors": {
-			"primary": {
-				"Dark": "rgb(30, 30, 30)dddddd",
-				"Light": "rgb(242, 242, 242)"
-			},
-			"secondary": {
-				"Red": "rgb(201, 55, 6)",
-				"Yellow": "rgb(252, 207, 80)",
-				"Blue": "rgb(39, 102, 143)"
+	"stringtest": "i was here",
+		"baseColors": {
+			"white": "#fff",
+			"black" : "#000",
+			"dark-gray": "#585858",
+			"tana": "#bdba9c",
+			"khaki": "#f0e68c",
+			"west-coast": "#64551f",
+			"highball": "#90813b",
+			"sandstone": "#7b6d5c",
+			"schooner": "#8b8378",
+			"spice": "#66543e",
+			"madras": "#4c3b25",
+			"onion": "#33250d",
+			"woodrush": "#332915",
+			"jacko-bean": "#2e1c08",
+			"acadia": "#1e1205",
+			"crowshead": "#1a130a"
+		},
+	"schemes":
+	[
+{
+	"key": "light",
+	"description": "'The main light on dark theme.'",
+	"parent": false,
+	"colors": {
+		"foreground": "woodrush",
+		"background": "tana",
+		"accent": "schooner",
+		"border": "highball",
+		"link": "tana"
+	}
+},
+		{
+			"key": "dark",
+			"description": "'DARK THEME!!'",
+			"parent": false,
+			"colors": {
+				"foreground": "tana",
+				"background": "crowshead",
+				"accent": "khaki",
+				"border": "foreground",
+				"link": "khaki"
 			}
 		},
+		{
+			"key": "top-menu",
+			"description": "'top menu!!'",
+			"parent": "dark",
+			"colors": {
+				"background": "jacko-bean"
+			}
+		},
+		{
+			"key": "form",
+			"description": "'top menu!!'",
+			"parent": "dark",
+			"colors": {
+				"border": "sandstone",
+				"background" : "madras"
+			}
+		},
+		{
+			"key": "tabs",
+			"description": "'tabs menu!!'",
+			"parent": "light",
+			"colors": {
+				"inactive": "onion"
+			}
+		}
+	]
+,
 		"themes": {
 			"Light": "light",
 			"Dark": "dark",
@@ -26,8 +86,8 @@
 				"left-border",
 				"3"
 			]
-		}
-	},
+		},
+
 	"typography": {
 		"required-props": "'font-family, letter-spacing, word-spacing, text-transform, text-decoration, font-style, font-weight'",
 		"modularscale": {
@@ -66,4 +126,5 @@
 		"patterns": "'./public/images/patterns/'",
 		"fonts": "'./public/fonts'"
 	}
+
 }

@@ -8,29 +8,19 @@
 @import "node_modules/sass-toolkit/stylesheets/toolkit";
 @import "node_modules/modularscale-sass/stylesheets/modularscale";
 @import "node_modules/compass-mixins/lib/compass/typography/vertical_rhythm";
+@import "node_modules/sass-dry/dry";
+
 
 //CONFIG JSON
 @import '../_data/config.json';
 
 
-
-
-
-
-
-
-
-
-
-
+@import "g-PatternLab/utilities/utilities";
 
 @import "g-PatternLab/config/config";
 //@import "base/base";
-//@import "utilities/utilities";
 
-
-
-@debug 'gilliaddn';
+@import "g-PatternLab/elements/elements";
 
 
 /*
@@ -101,6 +91,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
+
+/*
 @import "scss/base/global-classes";
 @import "scss/base/main";
 @import "scss/base/links";
@@ -111,39 +103,34 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/base/forms";
 @import "scss/base/tables";
 @import "scss/base/animation";
-
-@debug 'hello';
-
-div{
-	background: red;
-}
+*/
 
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
-@import "scss/objects/layout";
+//@import "scss/objects/layout";
 
 
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
-@import "scss/objects/header";
+/*@import "scss/objects/header";
 @import "scss/objects/nav";
 @import "scss/objects/main";
-@import "scss/objects/footer";
+@import "scss/objects/footer";*/
 
 
 
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
-@import "scss/objects/text";
+//@import "scss/objects/text";
 
 
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-@import "scss/objects/icons";
+/*@import "scss/objects/icons";
 @import "scss/objects/buttons";
 @import "scss/objects/blocks";
 @import "scss/objects/lists";
@@ -154,5 +141,4 @@ div{
 @import "scss/objects/article";
 @import "scss/objects/comments";
 @import "scss/objects/messaging";
-
-
+*/

@@ -1,37 +1,36 @@
 {
 	"stringtest": "i was here",
-		"baseColors": {
-			"white": "#fff",
-			"black" : "#000",
-			"dark-gray": "#585858",
-			"tana": "#bdba9c",
-			"khaki": "#f0e68c",
-			"west-coast": "#64551f",
-			"highball": "#90813b",
-			"sandstone": "#7b6d5c",
-			"schooner": "#8b8378",
-			"spice": "#66543e",
-			"madras": "#4c3b25",
-			"onion": "#33250d",
-			"woodrush": "#332915",
-			"jacko-bean": "#2e1c08",
-			"acadia": "#1e1205",
-			"crowshead": "#1a130a"
+	"baseColors": {
+		"white": "#fff",
+		"black": "#000",
+		"dark-gray": "#585858",
+		"tana": "#bdba9c",
+		"khaki": "#f0e68c",
+		"west-coast": "#64551f",
+		"highball": "#90813b",
+		"sandstone": "#7b6d5c",
+		"schooner": "#8b8378",
+		"spice": "#66543e",
+		"madras": "#4c3b25",
+		"onion": "#33250d",
+		"woodrush": "#332915",
+		"jacko-bean": "#2e1c08",
+		"acadia": "#1e1205",
+		"crowshead": "#1a130a"
+	},
+	"schemes": [
+		{
+			"key": "light",
+			"description": "'The main light on dark theme.'",
+			"parent": false,
+			"colors": {
+				"foreground": "woodrush",
+				"background": "tana",
+				"accent": "schooner",
+				"border": "highball",
+				"link": "tana"
+			}
 		},
-	"schemes":
-	[
-{
-	"key": "light",
-	"description": "'The main light on dark theme.'",
-	"parent": false,
-	"colors": {
-		"foreground": "woodrush",
-		"background": "tana",
-		"accent": "schooner",
-		"border": "highball",
-		"link": "tana"
-	}
-},
 		{
 			"key": "dark",
 			"description": "'DARK THEME!!'",
@@ -58,7 +57,7 @@
 			"parent": "dark",
 			"colors": {
 				"border": "sandstone",
-				"background" : "madras"
+				"background": "madras"
 			}
 		},
 		{
@@ -69,27 +68,26 @@
 				"inactive": "onion"
 			}
 		}
-	]
-,
-		"themes": {
-			"Light": "light",
-			"Dark": "dark",
-			"Form": "form",
-			"Modal": "modal",
-			"Grid Helper": "grid-helper"
-		},
-		"headings": {
-			"component_id": "g_Heading",
-			"modifiers": [
-				"2-font-serif",
-				"trailing-border",
-				"left-border",
-				"3"
-			]
-		},
-
+	],
+	"themes": {
+		"Light": "light",
+		"Dark": "dark",
+		"Form": "form",
+		"Modal": "modal",
+		"Grid Helper": "grid-helper"
+	},
+	"headings": {
+		"component_id": "g_Heading",
+		"modifiers": [
+			"2-font-serif",
+			"trailing-border",
+			"left-border",
+			"3"
+		]
+	},
 	"typography": {
 		"required-props": "'font-family, letter-spacing, word-spacing, text-transform, text-decoration, font-style, font-weight'",
+		"line-height": 1.4,
 		"modularscale": {
 			"base": "20px",
 			"ratio": 1.2,
@@ -101,18 +99,22 @@
 		"fonts": {
 			"default": {
 				"font-family": "monospace",
-				"text-transform": "none",
+				"text-transform": ".2px",
 				"text-decoration": "none",
 				"letter-spacing": 0,
-				"word-spacing": 0,
+				"word-spacing": "-1px",
 				"font-weight": "normal",
 				"font-style": "normal"
 			},
 			"font-san-serif": {
+				"font-family": "mr-eaves-sans"
 			},
 			"font-serif": {
+				"font-family": "mrs-eaves"
 			},
 			"font-small-caps": {
+				"font-family": "mrs-eaves-roman-small-caps",
+				"text-transform": "uppercase"
 			}
 		}
 	},
@@ -126,5 +128,4 @@
 		"patterns": "'./public/images/patterns/'",
 		"fonts": "'./public/fonts'"
 	}
-
 }

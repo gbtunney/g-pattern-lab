@@ -34,16 +34,15 @@
 
 /* Floats */
 .right {
-  //@include u-float-rhythm(right);
+  @include u-float-rhythm(right);
 }
 
 .right-search {
 	float: right;
-	//padding: 0 0 $pad 0;
 }
 
 .left {
-  //@include u-float-rhythm(left);
+  @include u-float-rhythm(left);
 }
 
 /* Text-Align */

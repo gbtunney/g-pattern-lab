@@ -67,14 +67,31 @@
 			"colors": {
 				"inactive": "onion"
 			}
+		},
+		{
+			"key": "grid-helper",
+			"description": "'grid helper menu!!'",
+			"parent": "dark",
+			"colors": {
+				"foreground": "white",
+				"background": "madras",
+				"accent": "khaki",
+				"border": "red"
+			}
+		},
+		{
+			"key": "modal",
+			"description": "'grid helper menu!!'",
+			"parent": "dark",
+			"colors": {
+				"overlay": "madras",
+				"background": "dark-gray"
+			}
 		}
 	],
-	"themes": {
-		"Light": "light",
-		"Dark": "dark",
-		"Form": "form",
-		"Modal": "modal",
-		"Grid Helper": "grid-helper"
+	"render-component-themes": {
+		 "light":"Light",
+		"dark": "Dark"
 	},
 	"headings": {
 		"component_id": "g_Heading",

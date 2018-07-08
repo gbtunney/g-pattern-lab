@@ -11,16 +11,21 @@
 @import "node_modules/sass-dry/dry";
 
 
+
+
+
 //CONFIG JSON
 @import '../_data/config.json';
+
+
 
 
 @import "g-PatternLab/utilities/utilities";
 
 @import "g-PatternLab/config/config";
-//@import "base/base";
 
 @import "g-PatternLab/elements/elements";
+@import "g-PatternLab/components/components";
 
 
 /*
@@ -87,15 +92,14 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 
 
-
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
 
-/*
 @import "scss/base/global-classes";
-@import "scss/base/main";
-@import "scss/base/links";
+@import "scss/base/base";
+
+/*
 @import "scss/base/headings";
 @import "scss/base/text";
 @import "scss/base/lists";

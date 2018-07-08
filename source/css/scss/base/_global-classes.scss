@@ -34,18 +34,16 @@
 
 /* Floats */
 .right {
-	float: right;
-	padding: 0 0 $pad $pad;
+  //@include u-float-rhythm(right);
 }
 
 .right-search {
 	float: right;
-	padding: 0 0 $pad 0;
+	//padding: 0 0 $pad 0;
 }
 
 .left {
-	float: left;
-	padding: 0 $pad $pad 0;
+  //@include u-float-rhythm(left);
 }
 
 /* Text-Align */
@@ -62,20 +60,41 @@
 }
 
 /* Display Classes */
-.hide-small {
-    @media all and (max-width: $bp-med) {
+
+.hide-xs{
+    @include breakpoint-range(xs) {
         display: none;
     }
 }
+.hide-small {
+    @include breakpoint-range(sm) {
+      display: none;
+        }
 
+}
 .hide-med {
-    @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+    @include breakpoint-range(md) {
         display: none;
     }
 }
 
 .hide-large {
-    @media all and (min-width: $bp-large) {
+    @include breakpoint-range(lg) {
+        display: none;
+    }
+}
+.hide-mobile{
+    @include breakpoint-range(xs) {
+        display: none;
+    }
+}
+.hide-tablet{
+    @include breakpoint-range(sm) {
+        display: none;
+    }
+}
+.hide-desktop{
+    @include breakpoint-range(sm) {
         display: none;
     }
 }
@@ -96,9 +115,3 @@
 .information {
     color: $information;
 }
-
-.font-secondary {
-    font-family: $font-secondary;
-}
-
-

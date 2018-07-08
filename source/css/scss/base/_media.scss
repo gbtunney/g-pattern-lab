@@ -9,13 +9,13 @@ img, video, object {
 }
 
 iframe {
-	margin-bottom: $space;
+@include trailer();
 }
 
 figure {
-	margin-bottom: $space;
+	@include trailer(2);
 	img {
-		margin-bottom: $space-half;
+		@include trailer(1);
 	}
 }
 figcaption {

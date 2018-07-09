@@ -1,0 +1,21 @@
+{% for key, name in render_component_themes %}
+<div class="{{ prefix }} {{ prefix }}--{{ key }}">
+    <div class="{{ prefix }}__label">
+        Theme: {{name}}
+    </div>
+    <div class="{{ prefix }}__wrapper">
+        <div class="{{ prefix }}--{{ key }}__foreground">
+            foreground
+        </div>
+        <div class="{{ prefix }}--{{ key }}__background">
+            background
+        </div>
+        <div class="{{ prefix }}--{{ key }}__accent">
+            accent
+        </div>
+        <div class="{{ prefix }}--{{ key }}__border">
+            border
+        </div>
+    </div>
+</div>
+{% endfor %}

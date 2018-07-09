@@ -1,10 +1,14 @@
 @if ($include-base-classes) {
+
+    $chroma-active-scheme: 'light';
+
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        @include color-scheme(dark, false);
+        @include color-scheme();
         @include setType(0, font-san-serif);
     }
+
 
     p {
         @include setType(0, font-san-serif);
@@ -110,4 +114,29 @@
     figcaption {
         font-style: italic;
     }
+
+    /*------------------------------------*\
+      LIST ELEMENTS
+  \*------------------------------------*/
+
+    ol, ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Definition Lists */
+    dl {
+        overflow: hidden;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: 0;
+    }
+
+
 }

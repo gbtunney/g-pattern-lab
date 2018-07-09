@@ -1,9 +1,25 @@
 @if($include-styleguide-classes) {
+   #sg-patterns{
+//       padding: 20%;
+   }
     .sg-subtype {
         // @include c-content-box(light);
         h2 {
             @include setType(2, font-serif);
+            //line-height: 1;
             @include trailing-border();
+            padding: 0;
+            margin: 0;
+            @include margin-trailer();
         }
+    }
+
+    .sg-pattern{
+        float:right;
+        @debug color(grid-helper,accent);
+        @include c-content-box(dark,90%,false,true);
+    }
+    .sg-subtype{
+        clear: both;
     }
 }

@@ -1,5 +1,8 @@
 {
   "title" : "Pattern Lab",
+  "dummyCopy": {
+    "sentence": "Faker.text(500)"
+  },
   "htmlClass": "pl",
   "bodyClass": "body",
   "img": {

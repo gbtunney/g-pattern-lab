@@ -1,5 +1,5 @@
 {
-	"stringtest": "i was here",
+	"stringtest": "'Faker.firstName'",
 	"baseColors": {
 		"white": "#fff",
 		"black": "#000",
@@ -104,9 +104,9 @@
 	},
 	"typography": {
 		"required-props": "'font-family, letter-spacing, word-spacing, text-transform, text-decoration, font-style, font-weight'",
-		"line-height": 1.4,
+		"line-height": 1.2,
 		"modularscale": {
-			"base": "20px",
+			"base": "10px",
 			"ratio": 1.2,
 			"sm": {
 				"base": "25px",
@@ -124,14 +124,17 @@
 				"font-style": "normal"
 			},
 			"font-san-serif": {
-				"font-family": "mr-eaves-sans"
+				"font-family": "mr-eaves-sans",
+				"title": "'Primary: Mr Eaves Sans'"
 			},
 			"font-serif": {
-				"font-family": "mrs-eaves"
+				"font-family": "mrs-eaves",
+				"title": "'Secondary, Headers : Mrs Eaves'"
 			},
 			"font-small-caps": {
 				"font-family": "mrs-eaves-roman-small-caps",
-				"text-transform": "uppercase"
+				"text-transform": "uppercase",
+				"title": "'Accent, Small Caps : Mrs Eaves Roman Small Caps'"
 			}
 		}
 	},

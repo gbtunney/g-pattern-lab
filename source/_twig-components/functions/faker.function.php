@@ -7,9 +7,13 @@
  */
 
 $default_size = 1200;
-$function = new Twig_SimpleFunction('Faker', function ($formatter) {
+$function = new Twig_SimpleFunction('Faker', function ($formatter,$arg = false) {
 
 	$faker = Faker\Factory::create();
 
-	return $faker->$formatter;
+	if ( $arg != false ){
+		return $faker->$formatter($arg);
+	}else{
+		return $faker->$formatter;
+	}
 }); ?>

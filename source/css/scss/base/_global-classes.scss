@@ -1,116 +1,118 @@
-/*------------------------------------*\
-    $GLOBAL CLASSES
-\*------------------------------------*/
+@if ($include-helper-classes) {
+    /*------------------------------------*\
+        $GLOBAL CLASSES
+    \*------------------------------------*/
 
-/* Clearfix */
-.cf {
-    *zoom: 1;
-}
-.cf:before, .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-    position: absolute !important;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Floats */
-.right {
-  @include u-float-rhythm(right);
-}
-
-.right-search {
-	float: right;
-}
-
-.left {
-  @include u-float-rhythm(left);
-}
-
-/* Text-Align */
-.align-right {
-	text-align: right;
-}
-
-.align-center {
-	text-align: center;
-}
-
-.align-left {
-	text-align: left;
-}
-
-/* Display Classes */
-
-.hide-xs{
-    @include breakpoint-range(xs) {
-        display: none;
+    /* Clearfix */
+    .cf {
+        *zoom: 1;
     }
-}
-.hide-small {
-    @include breakpoint-range(sm) {
-      display: none;
+    .cf:before, .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
+    /* Completely remove from the flow and screen readers. */
+    .is-hidden {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Completely remove from the flow but leave available to screen readers. */
+    .is-vishidden {
+        position: absolute !important;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* Floats */
+    .right {
+        @include u-float-rhythm(right);
+    }
+
+    .right-search {
+        float: right;
+    }
+
+    .left {
+        @include u-float-rhythm(left);
+    }
+
+    /* Text-Align */
+    .align-right {
+        text-align: right;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+    /* Display Classes */
+
+    .hide-xs {
+        @include breakpoint-range(xs) {
+            display: none;
+        }
+    }
+    .hide-small {
+        @include breakpoint-range(sm) {
+            display: none;
         }
 
-}
-.hide-med {
-    @include breakpoint-range(md) {
-        display: none;
     }
-}
-
-.hide-large {
-    @include breakpoint-range(lg) {
-        display: none;
+    .hide-med {
+        @include breakpoint-range(md) {
+            display: none;
+        }
     }
-}
-.hide-mobile{
-    @include breakpoint-range(xs) {
-        display: none;
+
+    .hide-large {
+        @include breakpoint-range(lg) {
+            display: none;
+        }
     }
-}
-.hide-tablet{
-    @include breakpoint-range(sm) {
-        display: none;
+    .hide-mobile {
+        @include breakpoint-range(xs) {
+            display: none;
+        }
     }
-}
-.hide-desktop{
-    @include breakpoint-range(sm) {
-        display: none;
+    .hide-tablet {
+        @include breakpoint-range(sm) {
+            display: none;
+        }
     }
-}
+    .hide-desktop {
+        @include breakpoint-range(sm) {
+            display: none;
+        }
+    }
 
-//States
-.valid {
-	color: $valid;
-}
+    //States
+    .valid {
+        color: $valid;
+    }
 
-.error {
-	color: $error;
-}
+    .error {
+        color: $error;
+    }
 
-.warning {
-    color: $warning;
-}
+    .warning {
+        color: $warning;
+    }
 
-.information {
-    color: $information;
+    .information {
+        color: $information;
+    }
 }

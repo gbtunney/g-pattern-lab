@@ -1,7 +1,9 @@
-.sg-subtype{
-   // @include c-content-box(light);
-    h2{
-      @include setType(2,font-serif);
-        @include trailing-border();
+@if($include-styleguide-classes) {
+    .sg-subtype {
+        // @include c-content-box(light);
+        h2 {
+            @include setType(2, font-serif);
+            @include trailing-border();
+        }
     }
 }

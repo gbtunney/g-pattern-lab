@@ -106,7 +106,7 @@
 		"required-props": "'font-family, letter-spacing, word-spacing, text-transform, text-decoration, font-style, font-weight'",
 		"line-height": 1.2,
 		"modularscale": {
-			"base": "10px",
+			"base": "20px",
 			"ratio": 1.2,
 			"sm": {
 				"base": "25px",

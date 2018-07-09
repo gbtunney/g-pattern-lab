@@ -10,23 +10,26 @@
 @import "node_modules/compass-mixins/lib/compass/typography/vertical_rhythm";
 @import "node_modules/sass-dry/dry";
 
-
-
-
-
-
-
 //CONFIG JSON
 @import '../_data/config.json';
 
+@import "scss/generic/variables";
+@import "scss/generic/mixins";
 
 @import "g-PatternLab/utilities/utilities";
 
 @import "g-PatternLab/config/config";
 
+@import "g-PatternLab/utilities/helpers/u-scheme-helper-classes";
+@import "scss/base/global-classes"; //classes came with startkit
+
 @import "g-PatternLab/elements/elements";
 @import "g-PatternLab/components/components";
 
+
+@import "scss/generic/reset";
+@import "scss/base/base";
+@import "scss/base/styleguide";
 /*
                                                 ,,            ,,                          ,,                                             
  .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO 
@@ -84,9 +87,9 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 
 
-@import "scss/generic/variables";
-@import "scss/generic/mixins";
-@import "scss/generic/reset";
+
+
+
 
 
 
@@ -95,9 +98,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $GLOBAL ELEMENTS
 \*------------------------------------*/
 
-@import "scss/base/global-classes";
-@import "scss/base/base";
-@import "scss/base/styleguide";
+
+
 
 /*
 @import "scss/base/headings";

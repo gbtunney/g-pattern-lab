@@ -14,6 +14,9 @@ $function = new Twig_SimpleFunction('Faker', function ($formatter,$arg = false) 
 	if ( $arg != false ){
 		return $faker->$formatter($arg);
 	}else{
+
 		return $faker->$formatter;
 	}
-}); ?>
+});
+
+?>

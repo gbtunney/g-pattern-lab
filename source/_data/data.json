@@ -1,5 +1,6 @@
 {
   "title" : "Pattern Lab",
+  "image_dir":"../../images/",
   "dummyCopy": {
     "sentence": "Faker.text(500)"
   },

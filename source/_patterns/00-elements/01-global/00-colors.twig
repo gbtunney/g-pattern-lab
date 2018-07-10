@@ -7,4 +7,13 @@
     {% endfor %}
 </ul>
 
+
+<img src="{{ FakerImage(900,200)}}">
+<img src="{{ Faker('imageUrl')}}">
 {{ source('icon-dragon.svg') }}
+
+{{ inline_svg('source/images/icons/icon-flame.svg') | raw }}
+	{% for image in images_by_directory() %}
+
+    {% endfor %}
+

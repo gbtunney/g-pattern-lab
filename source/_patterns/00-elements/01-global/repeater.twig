@@ -1,0 +1,9 @@
+{# This is the generic repeater class...for a gallery, or blog preview list, or something. #}
+<div class="{{ wrapper_id }} {{ styleModifier }}">
+	{% for key, data in repeater %}
+        {% for i in 0..data.count %}
+            {% include key  with data.data %}
+        {% endfor %}
+    {% endfor %}
+</div>
+

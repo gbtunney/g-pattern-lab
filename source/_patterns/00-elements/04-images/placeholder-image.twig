@@ -1,10 +1,9 @@
 {% if href %}<a href="{{ href }}">{% endif %}
-    {% if dimensions %}
-            <img src="http://via.placeholder.com/{{ dimensions.width }}x{{ dimensions.height }}">
-    {% elseif  width and height %}
-            <img src="http://via.placeholder.com/{{ width }}x{{ height }}">
+    {% if source == "blank"  %}
+        <img alt="{{ alt }}" src="http://via.placeholder.com/{{ dimensions.width }}x{{ dimensions.height }}">
+    {% elseif  (source == "fake") or (source == "dummy") or (source == false) %}
+        <img src="{{ FakerImage(dimensions.width,dimensions.height) }}">
     {% else %}
-        <img src="http://via.placeholder.com/500x400">
+        <img src="{{ source }}">
     {% endif %}
-
-    {% if href %}</a>{% endif %}
+{% if href %}</a>{% endif %}

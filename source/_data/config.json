@@ -1,5 +1,17 @@
 {
 	"stringtest": "'Faker.firstName'",
+	"defaults": {
+		"elements-placeholder-image": {
+			"test":"test string",
+			"dimensions": {
+				"width": 800,
+				"height": 200
+			},
+			"href": false,
+			"source": false,
+			"alt": false
+		}
+	},
 	"baseColors": {
 		"white": "#fff",
 		"black": "#000",

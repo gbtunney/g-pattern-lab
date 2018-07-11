@@ -1,0 +1,10 @@
+{% macro color_chip( key, color, name ,componentID, htmlelement) %}
+
+    {% if componentID  is null %}{% set componentID = 'g_cc' %}{% endif %}
+
+    <{{ htmlelement|default('div') }} class="{{ componentID }} {{ componentID }}--{{ key }}">
+        <span class="{{ componentID }}__color" style="background: {{ color | default('red') }};"></span>
+        <span class="{{ componentID }}__label">{{ name }} : {{ color | default('red') }}</span>
+    </{{ htmlelement|default('div') }}>
+
+{% endmacro %}

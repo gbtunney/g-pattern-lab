@@ -1,0 +1,12 @@
+{# image with caption, like for use in a gallery #}
+{%  if image is null %}
+    {% set image = defaults['elements-placeholder-image'] %}
+{% endif %}
+
+<{{ element | default('div') }} class="{{ component_id }} {{ styleModifier }}">
+
+    {% include 'elements-placeholder-image'  with image %}
+
+    <div>{{ caption | default(Faker('text',40)) }}</div>
+
+</{{ element | default('div') }}>

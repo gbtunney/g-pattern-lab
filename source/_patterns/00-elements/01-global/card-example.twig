@@ -1,0 +1,8 @@
+{% extends "card.twig" %}
+
+{% set title = Faker('text',50) %}
+{% block body %}
+<h1>GILLIAN{{ component_id }}</h1>
+    <p>
+        {{ Faker('text',500) }}    </p>
+{% endblock %}

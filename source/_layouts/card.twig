@@ -1,0 +1,33 @@
+<article class="{{ component_id }} {{ component_id }}--{{ styleModifier }}">
+
+    <header class="{{ component_id }}__header">
+        {% block header %}
+            {% block image %}
+                <img src="{{ FakerImage(600,400) }}" class="{{ component_id }}__image" alt="Card Image">
+            {% endblock %}
+        {% endblock %}
+    </header>
+
+    <div class="{{ component_id }}__content">
+        {% block content %}
+            <h2 class="{{ component_id }}__title">
+                {{ title | default("NO TITLE SET" ) }}
+            </h2>
+            <p class="{{ component_id }}__subtitle">
+                {{ subtitle | default("NO SUB TITLE SET" ) }}
+            </p>
+
+            <p class="{{ component_id }}__body">
+                {% block body %}
+                    <p>NO CONTENT SET</p>
+                {% endblock %}
+            </p>
+        {% endblock %}
+    </div>
+
+    <footer class="{{ component_id }}__footer">
+        <div>Footer</div>
+        <a href="#">Read More</a>
+    </footer>
+
+</article>

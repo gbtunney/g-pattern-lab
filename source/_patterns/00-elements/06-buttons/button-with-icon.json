@@ -1,8 +1,0 @@
-{
-    "component_id" : "g_Button",
-    "styleModifier": "^light",
-    "element": "div",
-    "target": false,
-    "href": false,
-    "label" : "Read More"
-}

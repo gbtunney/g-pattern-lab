@@ -1,0 +1,23 @@
+{
+	"component_id" : "g_unstyled",
+	"styleModifier": "^light",
+	"tag": "div",
+	"data" : false,
+	"icon,image":{
+		"element_id": "^__icon",
+		"dimensions": {
+			"width": 400,
+			"height": 200
+		},
+		"href": false,
+		"key" : "icon-flame",
+		"path" : "public/images/icons/icon-flame.svg",
+		"alt":false
+	},
+	"link":{
+		"element_id": "^__icon",
+		"target": false,
+		"href": false,
+		"label" : "Read More"
+	}
+}

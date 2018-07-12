@@ -1,0 +1,11 @@
+<{{ tag | default('div') }} class="{{ component_id }} {{ styleModifier }}">
+
+    {% block leftcontent %}
+        <div class="{{ component_id }}__left">{{ inline_svg() |raw }}</div>
+    {% endblock %}
+
+    {% block rightcontent %}
+        <div class="{{ component_id }}__right">{{ text | default(Faker('text',100)) }}</div>
+    {% endblock %}
+
+</{{ tag | default('div') }}>

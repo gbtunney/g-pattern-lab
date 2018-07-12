@@ -1,0 +1,22 @@
+<{{ tag | default('div') }} class="{{ component_id }} {{ styleModifier }}">
+
+    <header class="{{ component_id }}__header">
+        {% block header %}
+           <h2>Default Panel Title</h2>
+        {% endblock %}
+    </header>
+
+    <div class="{{ component_id }}__content">
+        {% block content %}
+            {{ text | default(Faker('text',100)) }}
+        {% endblock %}
+    </div>
+
+    <footer class="{{ component_id }}__footer">
+        {% block footer %}
+            <div>Footer</div>
+            <a href="#">Read More</a>
+        {% endblock %}
+    </footer>
+
+</{{ tag | default('div') }}>

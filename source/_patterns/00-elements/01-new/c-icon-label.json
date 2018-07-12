@@ -1,11 +1,13 @@
 {
 	"component_id" : "g_Icon_Content",
 	"styleModifier": "false",
-	"element": "div",
-	"target": false,
-	"href": false,
-	"label" : "Read More",
-
+	"tag": "div",
+	"link": {
+		"element_id": "^__link",
+		"target": false,
+		"href": false,
+		"label": "Read More"
+	},
 	"icon":{
 		"component_id" : "g_svg",
 		"styleModifier": false,
@@ -21,5 +23,4 @@
 			"alt":false
 		}
 	}
-
 }

@@ -1,16 +1,7 @@
 
 /* Icon Font */
-@font-face {
-	font-family: 'icons';
-	src:url('../fonts/icons.eot');
-	src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icons.woff') format('woff'),
-		url('../fonts/icons.ttf') format('truetype'),
-		url('../fonts/icons.svg#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 
+@include font-face('icons','../fonts/fa-regular-400');
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'icons';
@@ -113,13 +104,13 @@
 
 .icon-play-box {
 	display: block;
-	margin-left: $pad-double;
+	//margin-left: $pad-double;
 }
 
 .icon-play-box:before {
-	padding: $pad-quarter;
+	//padding: $pad-quarter;
 	background: $gray;
 	color: $white;
 	margin-left: -1.7rem;
-	margin-right: $pad-half;
+	//margin-right: $pad-half;
 }

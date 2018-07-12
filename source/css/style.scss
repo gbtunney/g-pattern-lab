@@ -9,6 +9,7 @@
 @import "node_modules/modularscale-sass/stylesheets/modularscale";
 @import "node_modules/compass-mixins/lib/compass/typography/vertical_rhythm";
 @import "node_modules/sass-dry/dry";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 
 //CONFIG JSON
 @import '../_data/config.json';
@@ -17,6 +18,9 @@
 @import "scss/generic/mixins";
 
 @import "g-PatternLab/utilities/utilities";
+
+
+
 
 @import "g-PatternLab/config/config";
 
@@ -30,6 +34,9 @@
 @import "scss/generic/reset";
 @import "scss/base/base";
 @import "scss/base/styleguide";
+@import "scss/objects/icons";
+
+
 /*
                                                 ,,            ,,                          ,,                                             
  .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO 

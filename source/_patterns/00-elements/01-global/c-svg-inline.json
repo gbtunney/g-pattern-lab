@@ -1,0 +1,15 @@
+{
+	"component_id" : "g_svg",
+	"styleModifier": false,
+	"element": "span",
+	"image":{
+		"dimensions": {
+			"width": 400,
+			"height": 200
+		},
+		"href": false,
+		"key" : "icon-flame",
+		"path" : "public/images/icons/icon-flame.svg",
+		"alt":false
+	}
+}

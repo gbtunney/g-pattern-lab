@@ -1,5 +1,6 @@
 {
 	"component_id" : "g_cs_list",
 	"element_id": "swatch",
-	"href":"#"
+	"href":"#",
+	"styleModifier": "^light center-text is-red"
 }

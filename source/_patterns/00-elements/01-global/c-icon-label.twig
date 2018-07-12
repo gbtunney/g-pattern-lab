@@ -1,0 +1,11 @@
+{# Simple icon with text , like as a list#}
+{% extends "o-row2up.twig" %}
+
+{% block leftcontent %}
+    {% include 'elements-svg-inline'  with icon %}
+{% endblock %}
+
+{% block rightcontent %}
+   {{ this }} GILLIAN ICON LIST: {{ label }}
+{% endblock %}
+

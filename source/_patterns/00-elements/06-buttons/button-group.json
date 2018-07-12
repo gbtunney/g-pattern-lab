@@ -1,0 +1,17 @@
+{
+    "wrapper_id": "wrapper_button_group_example",
+    "styleModifier": false,
+    "repeater": {
+        "elements-buttons": {
+            "count": 4,
+            "data": {
+                "component_id" : "g_Button",
+                "styleModifier": "^light",
+                "element": "div",
+                "target": false,
+                "href": false,
+                "label" : "Read More"
+            }
+        }
+    }
+}

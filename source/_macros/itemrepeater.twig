@@ -1,0 +1,19 @@
+{% macro itemrepeater( repeater_data, count ) %}
+
+    {% if repeater_data is iterable %}
+
+        {% for key, data in repeater_data %}
+            {% for i in 0..data.count %}
+                {% include key  with data.data %}
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <h2>I AM A STRING</h2>
+        {% for i in 0..count %}
+            {% include repeater_data %}
+        {% endfor %}
+
+    {% endif %}
+
+
+{% endmacro %}

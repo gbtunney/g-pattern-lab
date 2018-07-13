@@ -1,0 +1,13 @@
+{% extends "a_card.twig" %}
+
+{% import "placeholder_image.twig" as placeholder %}
+{% import "text.twig" as text %}
+{% set title = Faker('text',50) %}
+
+{% block image %}
+    {{ placeholder.Image( Image) }}
+{% endblock %}
+
+{% block body %}
+    <p>{{ Faker('text',500) }}</p>
+{% endblock %}

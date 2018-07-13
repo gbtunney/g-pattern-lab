@@ -1,6 +1,7 @@
-<{{ tag | default('article') }} class="{{ component_id }} {{ styleModifier }}">
+{% extends "a_base_object.twig" %}
 
-    <header class="{{ component_id }}__header">
+{% block content %}
+<header class="{{ component_id }}__header">
             {% block header %}
                 {% block image %}
                     <img src="{{ FakerImage(600,400) }}" class="{{ component_id }}__image" alt="Card Image">
@@ -9,7 +10,7 @@
     </header>
 
     <div class="{{ component_id }}__content">
-        {% block content %}
+        {% block content_wrapper %}
 
             <div class="{{ component_id }}__title-wrapper">
                 {% block title_wrapper %}
@@ -39,3 +40,5 @@
     </footer>
 
 </{{ tag | default('article') }}>
+
+{% endblock %}

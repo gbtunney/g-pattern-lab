@@ -1,4 +1,4 @@
-<{{ tag | default('div') }} class="{{ component_id }} {{ modifier_string(styleModifier, component_id ) }}">
+<{{ tag | default('div') }} class="{{ component_id }} {{ modifier_string(styleModifier, component_id ) }}" {% if css_background is defined %}{{ css_background_image( FakerImage(1200,900)) | raw }}{% endif %} >
 
     {% block content %}
         <p>This base object doesnt have any content currently.</p>

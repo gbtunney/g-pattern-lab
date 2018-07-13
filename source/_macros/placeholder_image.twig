@@ -1,0 +1,18 @@
+{% macro Image( image_data ) %}
+
+    {% if image_data.href %}<a href="{{ image_data.href }}">{% endif %}
+
+    {% if image_data.source == "blank" %}
+        <img alt="{{ image_data.alt }}"
+             src="http://via.placeholder.com/{{ image_data.dimensions.width }}x{{ image_data.dimensions.height }}">
+
+    {% elseif  (image_data.source == "fake") or (image_data.source == "dummy") or (image_data.source == false) %}
+        <img src="{{ FakerImage(image_data.dimensions.width, image_data.dimensions.height) }}">
+
+    {% else %}
+        <img src="{{ image_data.source }}">
+    {% endif %}
+
+    {% if image_data.href %}</a>{% endif %}
+
+{% endmacro %}

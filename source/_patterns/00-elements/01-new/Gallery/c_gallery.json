@@ -1,3 +1,47 @@
 {
+	"component_id": "g_gallery",
+	"styleModifier": false,
+	"tag": "div",
+	"repeaterdata": {
+		"0": {
+			"pattern": "elements-c_image_w_caption",
+			"data": {
+				"component_id" : "g_gallery_image",
+				"tag": "div",
+				"Image":{
+					"element_id": "^__image",
+					"dimensions": {
+						"width": 400,
+						"height": 200
+					},
+					"source":"blank",
+					"caption":"Image 1",
+					"href": false,
+					"path" : false,
+					"alt":false
+				}
 
+			}
+		},
+		"2": {
+			"pattern": "elements-c_image_w_caption",
+			"data": {
+				"tag": "div",
+				"component_id" : "g_gallery_image",
+				"Image":{
+					"element_id": "^__image",
+					"dimensions": {
+						"width": 400,
+						"height": 200
+					},
+					"source":"blank",
+					"caption":"Image 2",
+					"href": false,
+					"path" : false,
+					"alt":false
+				}
+
+			}
+		}
+	}
 }

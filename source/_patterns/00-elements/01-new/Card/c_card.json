@@ -1,5 +1,9 @@
 {
-	"component_id" : "g_gallery_item",
+	"component_id" : "g_Card",
+	"styleModifier": false,
+	"title" : "JUNK TITLE",
+	"subtitle": "JUNK subtitle",
+	"body" : false,
 	"tag": "div",
 	"Image":{
 		"element_id": "^__image",

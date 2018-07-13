@@ -1,0 +1,16 @@
+{% extends "a_base_object.twig" %}
+
+{% import "placeholder_image.twig" as placeholder %}
+{% import "text.twig" as text %}
+
+{% block content %}
+
+    <div class="{{ component_id }}__image">
+        {{ placeholder.Image( Image) }}
+    </div>
+
+    <div class="{{ component_id }}__caption">
+        {{ Image.caption | default(Faker('text',40)) }}
+    </div>
+
+{% endblock %}

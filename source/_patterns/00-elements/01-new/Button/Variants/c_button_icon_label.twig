@@ -1,0 +1,7 @@
+{% extends "c_button.twig" %}
+{# override componentid with element name
+ make a way of overriding include componentid with element. also look at the waythe repeater is included instead in the json.
+ #}
+{% block inner %}
+    {% include 'elements-c_icon_label'  with data %}
+{% endblock %}

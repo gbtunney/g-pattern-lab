@@ -1,17 +1,24 @@
-{% macro itemrepeater( repeater_data, count ) %}
+{% macro Repeat( repeater_data, count ) %}
 
     {% if repeater_data is iterable %}
 
-        {% for key, data in repeater_data %}
-            {% for i in 0..data.count %}
-                {% include key  with data.data %}
-            {% endfor %}
+        {% for data in repeater_data %}
+            {% if ( data.count is not defined  ) or ( data.count == 0 )%}
+                {% include data.pattern  with data.data %}
+            {% elseif  data.count >= 1  %}
+                {% for i in range(1, data.count)  %}
+                    {% include data.pattern  with data.data %}
+                {% endfor %}
+            {% endif %}
         {% endfor %}
+
     {% else %}
-        <h2>I AM A STRING</h2>
-        {% for i in 0..count %}
-            {% include repeater_data %}
-        {% endfor %}
+
+        {% if  count >= 1  %}
+            {% for i in range(1, count)  %}
+                {% include repeater_data %}
+            {% endfor %}
+        {% endif %}
 
     {% endif %}
 

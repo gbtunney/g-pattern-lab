@@ -1,0 +1,8 @@
+{% extends "a_base_object.twig" %}
+{% import "text.twig" as text %}
+
+{% block content %}
+    {% block inner %}
+        {{ text.Link(Link) }}
+    {% endblock %}
+{% endblock %}

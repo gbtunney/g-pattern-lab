@@ -1,0 +1,58 @@
+{
+    "component_id": "g_list_with_icon",
+    "styleModifier": false,
+    "tag": "ul",
+    "repeaterdata": {
+        "0": {
+            "count": 4,
+            "pattern": "elements-c_icon_label",
+            "data": {
+                "component_id" : "g_Button",
+                "tag": "li",
+                "Link": {
+                    "element_id": "^__link",
+                    "target": false,
+                    "href": false,
+                    "label": "Medallion Icon"
+                },
+                "Icon":{
+                    "element_id": "^__icon",
+                    "dimensions": {
+                        "width": 400,
+                        "height": 200
+                    },
+                    "href": false,
+                    "key" : "icon-medallion",
+                    "path" : "public/images/icons/icon-medallion.svg",
+                    "alt":false
+                }
+            }
+        },
+
+        "2": {
+            "count": 3,
+            "pattern": "elements-c_icon_label",
+            "data": {
+                "component_id" : "g_Button",
+                "tag": "li",
+                "Link": {
+                    "element_id": "^__link",
+                    "target": false,
+                    "href": false,
+                    "label": "Icon Flame"
+                },
+                "Icon":{
+                    "element_id": "^__icon",
+                    "dimensions": {
+                        "width": 400,
+                        "height": 200
+                    },
+                    "href": false,
+                    "key" : "icon-flame",
+                    "path" : "public/images/icons/icon-flame.svg",
+                    "alt":false
+                }
+            }
+        }
+    }
+}

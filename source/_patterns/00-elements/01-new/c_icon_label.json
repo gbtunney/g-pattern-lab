@@ -1,9 +1,14 @@
 {
-	"component_id" : "g_unstyled",
-	"styleModifier": "^light",
+	"component_id" : "g_Icon_Content",
+	"styleModifier": "false",
 	"tag": "div",
-	"data" : false,
-	"icon,image":{
+	"Link": {
+		"element_id": "^__link",
+		"target": false,
+		"href": false,
+		"label": "Read More"
+	},
+	"Icon":{
 		"element_id": "^__icon",
 		"dimensions": {
 			"width": 400,
@@ -13,11 +18,5 @@
 		"key" : "icon-flame",
 		"path" : "public/images/icons/icon-flame.svg",
 		"alt":false
-	},
-	"Link":{
-		"element_id": "^__icon",
-		"target": false,
-		"href": false,
-		"label" : "Read More"
 	}
 }

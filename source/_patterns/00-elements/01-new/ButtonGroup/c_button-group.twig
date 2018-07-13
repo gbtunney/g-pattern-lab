@@ -1,0 +1,6 @@
+{% extends "a_base_object.twig" %}
+{% import "itemrepeater.twig" as itemrepeater %}
+
+{% block content %}
+    {{ itemrepeater.Repeat(repeaterdata) }}
+{% endblock %}

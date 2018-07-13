@@ -1,0 +1,11 @@
+{
+	"component_id": "g_button",
+	"styleModifier": "^light",
+	"tag": "div",
+	"Link": {
+		"element_id": "^__link",
+		"target": false,
+		"href": false,
+		"label": "Read More"
+	}
+}

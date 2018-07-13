@@ -1,0 +1,14 @@
+{# Simple icon with text , like as a list#}
+{% extends "a_row-2x1.twig" %}
+{% import "text.twig" as text %}
+
+{% block leftcontent %}
+    {{ Icon.path }}
+    {{ inline_svg(Icon.path) | raw }}
+{% endblock %}
+
+{% block rightcontent %}
+
+    {{ text.Link(Link) }}
+{% endblock %}
+

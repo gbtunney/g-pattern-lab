@@ -1,4 +1,18 @@
 {
+  "defaults": {
+    "elements-placeholder-image" : {
+      "element_id": "^__image",
+      "dimensions": {
+        "width": 400,
+        "height": 200
+      },
+      "source": "blank",
+      "caption": "default caption ",
+      "href": false,
+      "path": false,
+      "alt": false
+    }
+  },
   "1": {
     "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
     "img": {

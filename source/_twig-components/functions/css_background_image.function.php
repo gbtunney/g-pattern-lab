@@ -7,5 +7,5 @@
  */
 $function = new Twig_SimpleFunction('css_background_image', function ($path = 'public/images/icons/icon-flame.svg',$color= 'red') {
 
-	return 'style="background-image:url(' . $path .');"';
+	return 'background-image="' . $path .'"';
 });

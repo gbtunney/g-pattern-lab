@@ -1,5 +1,6 @@
-<{{ tag | default('div') }} class="{{ component_id }} {{ styleModifier }}">
+{% extends "a_base_object.twig" %}
 
+{% block content %}
     {% block leftcontent %}
         <div class="{{ component_id }}__left">{{ inline_svg() |raw }}</div>
     {% endblock %}
@@ -8,4 +9,4 @@
         <div class="{{ component_id }}__right">{{ text | default(Faker('text',100)) }}</div>
     {% endblock %}
 
-</{{ tag | default('div') }}>
+{% endblock %}

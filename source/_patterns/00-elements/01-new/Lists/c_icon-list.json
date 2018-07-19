@@ -7,7 +7,7 @@
             "count": 4,
             "pattern": "elements-c_icon_label",
             "data": {
-                "component_id" : "g_Button",
+                "component_id" : "g-Button",
                 "tag": "li",
                 "Link": {
                     "element_id": "^__link",
@@ -33,7 +33,7 @@
             "count": 3,
             "pattern": "elements-c_icon_label",
             "data": {
-                "component_id" : "g_Button",
+                "component_id" : "g-Button",
                 "tag": "li",
                 "Link": {
                     "element_id": "^__link",

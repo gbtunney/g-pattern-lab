@@ -3,10 +3,14 @@
 {% import "text.twig" as text %}
 
 {% block leftcontent %}
-    {{ inline_svg(Icon.path) | raw }}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__left">
+        <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__icon">
+        {{ inline_svg(Icon.path) |raw }}
+        </div>
+    </div>
 {% endblock %}
 
 {% block rightcontent %}
-    {{ text.Link(Link) }}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__right">{{ text.Link(Link) }}</div>
 {% endblock %}
 

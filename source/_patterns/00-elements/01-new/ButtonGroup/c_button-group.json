@@ -1,12 +1,13 @@
 {
-    "component_id": "g_button_group",
-    "styleModifier": false,
+    "component_id": "g-Button-Group",
+    "styleModifier": "^dark",
     "repeaterdata": {
         "0": {
             "pattern": "elements-c_button",
             "count": 0,
             "data": {
-                "component_id" : "g_Button",
+                "component_id" : "g-Button",
+                "styleModifier": "--is-active",
                 "tag": "div",
                 "Link": {
                     "element_id": "^__link",
@@ -20,7 +21,7 @@
             "count": 3,
             "pattern": "elements-c_button",
             "data": {
-                "component_id" : "g_Button",
+                "component_id" : "g-Button",
                 "tag": "div",
                 "Link": {
                     "element_id": "^__link",

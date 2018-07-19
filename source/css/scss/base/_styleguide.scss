@@ -15,9 +15,10 @@
     }
 
     .sg-pattern{
-        float:right;
-        @debug color(grid-helper,accent);
-        @include c-content-box(dark,90%,false,true);
+       // float:right;
+        //@debug color(grid-helper,accent);
+        @include color-scheme(dark);
+      //  @include c-content-box(dark,90%,false,true);
     }
     .sg-subtype{
         clear: both;

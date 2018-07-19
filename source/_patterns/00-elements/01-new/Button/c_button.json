@@ -1,6 +1,6 @@
 {
-	"component_id": "g_button",
-	"styleModifier": "^light",
+	"component_id": "g-Button",
+	"styleModifier": "^dark",
 	"tag": "div",
 	"Link": {
 		"element_id": "^__link",

@@ -1,4 +1,5 @@
-{% macro Link(data) %}
+{% macro Link(data ) %}
+
     {% if data.href is defined %}
         <a class="{{ component_id }}__link" href="{{ data.href | default('#') }}" {% if target %} ref="{{ data.target }}"{% endif %} >
     {% endif %}

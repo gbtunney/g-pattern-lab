@@ -16,7 +16,8 @@
 		"woodrush": "#332915",
 		"jacko-bean": "#2e1c08",
 		"acadia": "#1e1205",
-		"crowshead": "#1a130a"
+		"crowshead": "#1a130a",
+		"testing": "#ff0000"
 	},
 	"schemes": [
 		{
@@ -28,7 +29,7 @@
 				"background": "tana",
 				"accent": "schooner",
 				"border": "highball",
-				"link": "tana"
+				"link": "woodrush"
 			}
 		},
 		{
@@ -39,7 +40,7 @@
 				"foreground": "tana",
 				"background": "crowshead",
 				"accent": "khaki",
-				"border": "foreground",
+				"border": "tana",
 				"link": "khaki"
 			}
 		},
@@ -63,7 +64,7 @@
 		{
 			"key": "tabs",
 			"description": "'tabs menu!!'",
-			"parent": "light",
+			"parent": "dark",
 			"colors": {
 				"inactive": "onion"
 			}

@@ -1,8 +1,10 @@
 {
-	"component_id" : "g_unstyled",
-	"styleModifier": "^light",
+	"component_id" : "g-Button",
+	"styleModifier": "^light -includeIcon -iconLeft",
 	"tag": "div",
 	"data" : {
+		"component_id":"g-Button__inner",
+		"parent": "g-Button",
 		"Link":{
 			"element_id": "^__link",
 			"target": false,

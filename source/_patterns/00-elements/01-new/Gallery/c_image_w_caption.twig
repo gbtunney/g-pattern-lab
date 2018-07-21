@@ -4,7 +4,6 @@
 {% import "text.twig" as text %}
 
 {% block content %}
-
     <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__image">
         {{ placeholder.Image( Image) }}
     </div>
@@ -12,5 +11,4 @@
     <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__caption">
         {{ Image.caption | default(Faker('text',40)) }}
     </div>
-
 {% endblock %}

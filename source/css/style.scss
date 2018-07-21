@@ -43,9 +43,10 @@
 
 
 
-
+@import "g-PatternLab/objects/objects";
 @import "g-PatternLab/elements/elements";
 @import "g-PatternLab/components/components";
+
 
 //@if ($include-font-icons){
    // @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -93,6 +94,7 @@ $debug-outlines:false;
     }
 }
 
+@debug $-dry-placeholders;
 
 
 

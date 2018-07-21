@@ -1,5 +1,5 @@
 {
-	"component_id": "g-Gallery",
+	"component_id": "g-Galjjlery",
 	"styleModifier": "^frame -has-frame",
 	"tag": "div",
 	"repeaterdata": {
@@ -26,9 +26,10 @@
 		},
 		"2": {
 			"pattern": "elements-c_image_w_caption",
-			"parent" :"g-Gallery",
+
 			"data": {
 				"tag": "div",
+				"styleModifier":"^light",
 				"component_id" : "g-Gallery-Card",
 				"Image":{
 					"element_id": "^__image",

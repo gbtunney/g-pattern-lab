@@ -1,6 +1,6 @@
 {
-	"component_id" : "g_Card",
-	"styleModifier": false,
+	"component_id" : "g-Card",
+	"styleModifier":"light",
 	"title" : "JUNK TITLE",
 	"subtitle": "JUNK subtitle",
 	"body" : false,

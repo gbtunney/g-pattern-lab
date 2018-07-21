@@ -1,5 +1,5 @@
 {
-	"component_id" : "g_gallery_item",
+	"component_id" : "g-Gallery-Card",
 	"tag": "div",
 	"Image":{
 		"element_id": "^__image",

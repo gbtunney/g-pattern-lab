@@ -1,11 +1,10 @@
 @if ($include-base-classes) {
 
-    $chroma-active-scheme: 'light';
 
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        @include color-scheme();
+       // @include color-scheme();
         @include setType(0, font-san-serif);
     }
 

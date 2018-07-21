@@ -5,11 +5,11 @@
 
 {% block content %}
 
-    <div class="{{ component_id }}__image">
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__image">
         {{ placeholder.Image( Image) }}
     </div>
 
-    <div class="{{ component_id }}__caption">
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__caption">
         {{ Image.caption | default(Faker('text',40)) }}
     </div>
 

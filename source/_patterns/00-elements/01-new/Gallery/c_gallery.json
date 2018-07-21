@@ -1,12 +1,13 @@
 {
-	"component_id": "g_gallery",
-	"styleModifier": false,
+	"component_id": "g-Gallery",
+	"styleModifier": "^frame -has-frame",
 	"tag": "div",
 	"repeaterdata": {
 		"0": {
 			"pattern": "elements-c_image_w_caption",
+			"parent" :"g-Gallery",
 			"data": {
-				"component_id" : "g_gallery_image",
+				"component_id" : "g-Gallery-Card",
 				"tag": "div",
 				"Image":{
 					"element_id": "^__image",
@@ -25,9 +26,10 @@
 		},
 		"2": {
 			"pattern": "elements-c_image_w_caption",
+			"parent" :"g-Gallery",
 			"data": {
 				"tag": "div",
-				"component_id" : "g_gallery_image",
+				"component_id" : "g-Gallery-Card",
 				"Image":{
 					"element_id": "^__image",
 					"dimensions": {

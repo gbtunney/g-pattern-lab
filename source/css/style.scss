@@ -1,5 +1,7 @@
 //****GILLIANS PATTERN LAB ****//
 
+$vendor-scripts: "node_modules/";
+
 //IMPORTED TOOLS.
 @import "node_modules/sass-toolkit/stylesheets/toolkit";
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
@@ -15,6 +17,7 @@
 
 
 
+
 @debug 'hello';
 //CONFIG JSON
 @import '../_data/config.json';
@@ -24,17 +27,9 @@
 
 @import "g-PatternLab/utilities/utilities";
 
-
-
-
-
-
-
-
-
 @import "g-PatternLab/config/config";
 
-@debug $chroma-active-scheme;
+
 @import "scss/generic/reset";
 
 @import "scss/base/base";
@@ -54,6 +49,9 @@
 
 //@if ($include-font-icons){
    // @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+
+
 
 //}
 @import "scss/objects/icons";
@@ -87,8 +85,10 @@ $debug-outlines:false;
 
 
 
+
         &:before {
             /*  content: attr(class);
+
               background: green;
               height: 40px;
               width: 40px;
@@ -99,6 +99,16 @@ $debug-outlines:false;
 }
 
 @debug $-dry-placeholders;
+
+
+
+
+
+
+
+
+
+
 
 
 

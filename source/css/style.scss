@@ -30,21 +30,21 @@ $vendor-scripts: "node_modules/";
 @import "g-PatternLab/config/config";
 
 
-@import "scss/generic/reset";
+//@import "scss/generic/reset";
 
-@import "scss/base/base";
-@import "scss/base/styleguide";
-
-
-
-@import "g-PatternLab/utilities/helpers/u-scheme-helper-classes";
-@import "scss/base/global-classes"; //classes came with startkit
+//@import "scss/base/base";
+//@import "scss/base/styleguide";
 
 
 
-@import "g-PatternLab/objects/objects";
-@import "g-PatternLab/elements/elements";
-@import "g-PatternLab/components/components";
+//@import "g-PatternLab/utilities/helpers/u-scheme-helper-classes";
+//@import "scss/base/global-classes"; //classes came with startkit
+
+
+
+//@import "g-PatternLab/objects/objects";
+//@import "g-PatternLab/elements/elements";
+//@import "g-PatternLab/components/components";
 
 
 //@if ($include-font-icons){

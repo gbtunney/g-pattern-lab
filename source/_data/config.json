@@ -183,5 +183,10 @@
 	"slicer": {
 		"breakpoints": "0 480px 768px 992px 1200px",
 		"breakpoint-names": "xs sm md lg"
+	},
+	"bem-block-namespaces": {
+		"object": "o",
+		"component": "g",
+		"utility": "u"
 	}
 }

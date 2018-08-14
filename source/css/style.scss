@@ -19,15 +19,20 @@ $vendor-scripts: "node_modules/";
 @import "scss/generic/variables";
 @import "scss/generic/mixins";
 
-@import "g-PatternLab/utilities/utilities";
 
+@import "g-PatternLab/utilities/utilities";
 @import "g-PatternLab/config/config";
+@import "g-PatternLab/components/components";
+
+
+@include g-generate-component(button);
 
 
 //@import "scss/generic/reset";
 
 //@import "scss/base/base";
 //@import "scss/base/styleguide";
+
 
 
 

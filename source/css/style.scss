@@ -17,14 +17,26 @@ $vendor-scripts: "node_modules/";
 @import '../_data/config.json';
 
 @import "scss/generic/variables";
+
 @import "scss/generic/mixins";
+
+
+
+
+
 
 
 @import "g-PatternLab/utilities/utilities";
 @import "g-PatternLab/config/config";
 @import "g-PatternLab/components/components";
 
+
+
+
 @import "g-PatternLab/objects/objects";
+
+@import "g-PatternLab/config/generator";
+
 
 
 
@@ -33,7 +45,10 @@ $vendor-scripts: "node_modules/";
 
 
 @import "scss/generic/reset";
-@include g-generate-component(button);
+//@include g-generate-component(button);
+
+//@include g-generate-component(card);
+
 //@import "scss/base/base";
 //@import "scss/base/styleguide";
 

@@ -1,0 +1,17 @@
+{
+    "component_id": "g-Button",
+    "styleModifier": false,
+    "data": {
+            "pattern": "elements-c_button",
+            "data": {
+                "component_id": "g-Button",
+                "tag": "div",
+                "Link": {
+                    "element_id": "^__link",
+                    "target": false,
+                    "href": false,
+                    "label": "Read More"
+                }
+            }
+    }
+}

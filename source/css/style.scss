@@ -24,12 +24,16 @@ $vendor-scripts: "node_modules/";
 @import "g-PatternLab/config/config";
 @import "g-PatternLab/components/components";
 
+@import "g-PatternLab/objects/objects";
 
+
+
+
+
+
+
+@import "scss/generic/reset";
 @include g-generate-component(button);
-
-
-//@import "scss/generic/reset";
-
 //@import "scss/base/base";
 //@import "scss/base/styleguide";
 

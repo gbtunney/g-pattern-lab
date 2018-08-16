@@ -1,0 +1,26 @@
+{
+	"component_id" : "g-Button",
+	"styleModifier": "^light -includeIcon -iconLeft",
+	"tag": "div",
+	"data" : {
+		"component_id":"g-Button__inner",
+		"parent": "g-Button",
+		"Link":{
+			"element_id": "^__link",
+			"target": false,
+			"href": false,
+			"label" : "Read More"
+		},
+		"Icon":{
+			"element_id": "^__icon",
+			"dimensions": {
+				"width": 400,
+				"height": 200
+			},
+			"href": false,
+			"key" : "icon-flame",
+			"path" : "public/images/icons/icon-flame.svg",
+			"alt":false
+		}
+	}
+}

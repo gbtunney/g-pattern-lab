@@ -1,0 +1,10 @@
+<div  class="o-container-vlist-natural-children-width">
+    {% for key, value in render_component_themes %}
+
+        {% set newdata = data.data %}
+        {% set newdata = newdata|merge({ ("styleModifier") : "^" ~ key ~ ""}) %}
+
+        {% include data.pattern  with  newdata %}
+
+    {% endfor %}
+</div>

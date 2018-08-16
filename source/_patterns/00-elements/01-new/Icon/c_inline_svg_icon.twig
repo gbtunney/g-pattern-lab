@@ -1,0 +1,16 @@
+{# Simple icon with text , like as a list#}
+{% extends "a_row-2x1.twig" %}
+{% import "text.twig" as text %}
+
+{% block leftcontent %}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__left">
+        <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__icon">
+        {{ inline_svg(Icon.path) |raw }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block rightcontent %}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__right">{{ text.Link(Link) }}</div>
+{% endblock %}
+

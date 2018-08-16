@@ -1,0 +1,10 @@
+{% extends "c_button.twig" %}
+{# override componentid with element name
+ make a way of overriding include componentid with element. also look at the waythe repeater is included instead in the json.
+ #}
+
+{% block inner %}
+<div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__icon">
+    {{ inline_svg(Icon.path) |raw }}
+    </div>
+{% endblock %}

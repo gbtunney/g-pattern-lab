@@ -2,7 +2,18 @@
 {% import "text.twig" as text %}
 
 {% block content %}
+
+
+        {% if Link.href is defined %}
+            <a class="{{ component_id }}__link" href="{{ Link.href | default('#') }}" {% if target %} ref="{{ Link.target }}"{% endif %} >
+        {% endif %}
+
     {% block inner %}
-        {{ text.Link(Link) }}
+        {{ Link.label }}
     {% endblock %}
+
+    {% if Link.href is defined %}
+            </a>
+        {% endif %}
+
 {% endblock %}

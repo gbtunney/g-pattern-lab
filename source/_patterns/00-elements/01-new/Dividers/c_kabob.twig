@@ -1,0 +1,30 @@
+{% extends "a_row-3x1.twig" %}
+{% import "text.twig" as text %}
+
+{% block leftcontent %}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__left">
+        <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__icon">
+            {{ inline_svg(Icon.path) |raw }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block centercontent %}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__center">
+        <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__inner">
+            {% if kabob_label %}
+                <span>{{ kabob_label | escape }}</span>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block rightcontent %}
+    <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__right">
+        <div class="{% if parent is not null %}{{ parent}}{% else %}{{ component_id }}{% endif %}__icon">
+            {{ inline_svg(Icon.path) |raw }}
+        </div>
+    </div>
+{% endblock %}
+

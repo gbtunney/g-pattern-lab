@@ -1,0 +1,28 @@
+{
+    "component_id": "g-Button",
+    "styleModifier": false,
+    "data": {
+            "pattern": "elements-c_button_icon_single",
+            "data": {
+                "component_id": "g-Button",
+                "tag": "div",
+                "Link": {
+                    "element_id": "^__link",
+                    "target": false,
+                    "href": false,
+                    "label": "Read More"
+                },
+                "Icon":{
+                    "element_id": "^__icon",
+                    "dimensions": {
+                        "width": 400,
+                        "height": 200
+                    },
+                    "href": false,
+                    "key" : "icon-flame",
+                    "path" : "public/images/icons/icon-tumblr.svg",
+                    "alt":false
+                }
+            }
+    }
+}

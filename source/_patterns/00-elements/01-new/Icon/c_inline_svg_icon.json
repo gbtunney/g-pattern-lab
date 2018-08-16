@@ -1,0 +1,22 @@
+{
+	"component_id" : "g_Icon_Content",
+	"styleModifier": "false",
+	"tag": "div",
+	"Link": {
+		"element_id": "^__link",
+		"target": false,
+		"href": "http://google.com",
+		"label": "Read More"
+	},
+	"Icon":{
+		"element_id": "^__icon",
+		"dimensions": {
+			"width": 400,
+			"height": 200
+		},
+		"href": false,
+		"key" : "icon-flame",
+		"path" : "public/images/icons/icon-medallion.svg",
+		"alt":false
+	}
+}

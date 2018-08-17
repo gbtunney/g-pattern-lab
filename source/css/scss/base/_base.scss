@@ -1,26 +1,28 @@
 @if ($include-base-classes) {
 
-
+@include establish-baseline();
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
        // @include color-scheme();
-        @include setType(0, font-san-serif);
+        @include setType(0, font-serif);
     }
 
 
     p {
-        @include setType(0, font-san-serif);
+        @include setType(0, font-serif);
     }
     /*
      * Links
      */
     a {
         //color: color(accent);
+font-size: inherit;
 
-        @include setType(0, font-san-serif);
+       @include setType(0, font-san-serif);
 
     }
+
 
     /* Headers */
     h1,
@@ -41,7 +43,7 @@
         color: inherit;
 
         font-size: inherit;
-        line-height: inherit;
+        //line-height: inherit;
         //@include trailer(3);
 
     }

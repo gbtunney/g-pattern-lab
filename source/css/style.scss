@@ -35,22 +35,23 @@ $vendor-scripts: "node_modules/";
 
 @import "g-PatternLab/objects/objects";
 
+@import "scss/generic/reset";
+
+@import "scss/base/base";
+
 @import "g-PatternLab/config/generator";
 
 
-
-
-
-
-
-
-@import "scss/generic/reset";
 //@include g-generate-component(button);
 
 //@include g-generate-component(card);
 
 //@import "scss/base/base";
 //@import "scss/base/styleguide";
+
+
+
+
 
 
 

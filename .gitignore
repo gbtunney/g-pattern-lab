@@ -2,6 +2,7 @@
 export/*
 public/*
 source/styleguide/*
+source/css/g-PatternLab/*
 vendor/*
 *.css
 source/bkkbuttons

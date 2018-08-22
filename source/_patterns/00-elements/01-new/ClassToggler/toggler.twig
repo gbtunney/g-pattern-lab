@@ -1,0 +1,8 @@
+element id : {{guid }}
+<hr>
+<input type="text" class="g-CSS-toggler-input" value="Hello">
+<select multiple size="25" class="g-CSS-toggler" data-css-toggle-id="{{ guid }}">
+    {% for selector in css.simpleSelectors.classes %}
+        <option value="{{ selector | trim('.', 'left') }}">{{ selector | trim('.', 'left')}}</option>
+    {% endfor %}
+</select>

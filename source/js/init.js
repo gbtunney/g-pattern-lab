@@ -1,3 +1,24 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+    //alert();
+    
+    $('.g-CSS-toggler').change(function() {
+        console.log( "Handler for .change() called." + $(this).val() );
+  var componentid =   $(this).attr('data-css-toggle-id');
+        $('#'+ componentid).removeClass();
+    
+      
+        for ( var i = 0 ; i<$(this).val().length ; i++){
+            console.log($(this).val()[i]);
+    
+            $('#'+ componentid).addClass($(this).val()[i]);
+    
+        }
+        
+    });
+    
+});
+
 (function(w){
 	var sw = document.body.clientWidth,
 		sh = document.body.clientHeight;
@@ -8,7 +29,10 @@
 		
 		//updateAds();
 	});
-
+    
+    
+ 
+    
 
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
@@ -24,3 +48,4 @@
 		$('.header .search-form').toggleClass('active');
 	});
 })(this);
+

@@ -1,14 +1,16 @@
-<div  class="o-container-vlist-natural-children-width">
+<div class="o-container-vlist-natural-children-width">
     {% for key, value in render_component_themes %}
-{% set guid = Faker('md5') %}
-        {% set newdata = data.data %}
-        {% set newdata = newdata|merge({ ("styleModifier") : "^" ~ key ~ ""}) %}
-        {% set newdata = newdata|merge({ ("guid") : guid}) %}
 
-        {% include data.pattern  with  newdata %}
+        {% set guid = Faker('md5') %}
+            <div class="toggler-wrap-{{ guid }} toggler-wrapper">
+                {% set newdata = data.data %}
+                {% set newdata = newdata|merge({ ("styleModifier") : "^" ~ key ~ ""}) %}
+                {% set newdata = newdata|merge({ ("guid") : guid}) %}
 
-        {% include 'elements-toggler'  with  {'guid':  guid }  %}
+                {% include data.pattern  with  newdata %}
+                {% include 'elements-toggler'  with  {'guid':  guid } %}
 
-
+                    <hr>
+            </div>
     {% endfor %}
 </div>

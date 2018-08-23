@@ -39,6 +39,8 @@ $vendor-scripts: "node_modules/";
 
 @import "scss/base/base";
 
+@debug $bem-block-namespaces;
+
 @import "g-PatternLab/config/generator";
 
 
@@ -50,9 +52,22 @@ $vendor-scripts: "node_modules/";
 //@import "scss/base/styleguide";
 
 
+a,a:hover{
 
 
+    @include resetType;
 
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.g-CSS-toggler{
+    float: right;
+}
+.toggler-wrapper{
+    padding: rhythm(2);
+   // @include debug-boundaries-children();
+}
 
 
 

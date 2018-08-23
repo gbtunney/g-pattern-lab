@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy-webfont": "cp -a node_modules/@fortawesome/fontawesome-free/webfonts/. source/fonts/",
     "styles": "node-sass -r --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch -rw source/css/style.scss source/css/style.css",
-    "style-dump": "list-selectors source/css/style.css -pretty"
+    "audit": "list-selectors source/css/style.css > source/_data/css-selectors.json -pretty",
+    "lint":"jsonlint-cli source/_data/config.json"
 
   },
   "author": "Gillian Tunney",

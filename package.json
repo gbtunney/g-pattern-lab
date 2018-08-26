@@ -8,15 +8,16 @@
     "copy-webfont": "cp -a node_modules/@fortawesome/fontawesome-free/webfonts/. source/fonts/",
     "styles": "node-sass -r --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch -rw source/css/style.scss source/css/style.css",
     "audit": "list-selectors source/css/style.css > source/_data/css-selectors.json -pretty",
-    "lint":"jsonlint-cli source/_data/config.json"
-
+    "lint": "jsonlint-cli source/_data/config.json"
   },
   "author": "Gillian Tunney",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.0",
     "node-sass": "^4.9.2",
-    "node-sass-json-importer": "^3.3.1"
+    "node-sass-json-importer": "^3.3.1",
+    "ramda": "^0.25.0",
+    "vue": "^2.5.17"
   },
   "watch": {
     "test": "{src,test}/*.js"
@@ -26,10 +27,17 @@
     "breakpoint-slicer": "^2.0.0",
     "chroma-sass": "^1.2.6",
     "compass-mixins": "^0.12.10",
+    "css-reset-and-normalize-sass": "^0.1.2",
+    "list.js": "^1.5.0",
+    "meyer-reset-scss": "^2.0.4",
     "modularscale-sass": "^3.0.5",
     "npm-watch": "^0.3.0",
     "sass-bem-constructor": "^1.1.0",
     "sass-dry": "^1.0.0",
-    "sass-toolkit": "^2.10.2"
+    "sass-toolkit": "^2.10.2",
+    "vue": "^2.5.17"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
   }
 }

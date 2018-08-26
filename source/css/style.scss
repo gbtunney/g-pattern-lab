@@ -17,36 +17,23 @@ $vendor-scripts: "node_modules/";
 @import '../_data/config.json';
 
 @import "scss/generic/variables";
-
 @import "scss/generic/mixins";
-
-
-
-
-
-
 
 @import "g-PatternLab/utilities/utilities";
 @import "g-PatternLab/config/config";
 @import "g-PatternLab/components/components";
-
-
-
-
 @import "g-PatternLab/objects/objects";
 
-@import "scss/generic/reset";
 
-@import "scss/base/base";
+@import "node_modules/meyer-reset-scss/reset-src";
+@import "g-PatternLab/utilities/base";
+
+//@import "scss/base/base";
 
 @debug $bem-block-namespaces;
 
 @import "g-PatternLab/config/generator";
 
-
-//@include g-generate-component(button);
-
-//@include g-generate-component(card);
 
 //@import "scss/base/base";
 //@import "scss/base/styleguide";
@@ -69,27 +56,18 @@ a,a:hover{
    // @include debug-boundaries-children();
 }
 
+#hacker-list{
+    li{
+        @include g-color-scheme(dark);
+
+        p{
+            @include setType(-1,font-serif);
+        }
+    }
+}
 
 
-
-//@import "g-PatternLab/utilities/helpers/u-scheme-helper-classes";
-//@import "scss/base/global-classes"; //classes came with startkit
-
-
-
-//@import "g-PatternLab/objects/objects";
-//@import "g-PatternLab/elements/elements";
-//@import "g-PatternLab/components/components";
-
-
-//@if ($include-font-icons){
-   // @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-
-
-
-
-//}
-@import "scss/objects/icons";
+//@import "scss/objects/icons";
 
 
 $debug-outlines:false;

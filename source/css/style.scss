@@ -81,6 +81,7 @@ $debug-outlines:false;
 
 
 
+
     [class^="g_"],
     [class*=" g_"]
 [class="g_gallery"] {
@@ -111,7 +112,7 @@ $debug-outlines:false;
     }
 }
 
-@debug $-dry-placeholders;
+@debug #{get-current-scheme-color-by-string(fill, foreground, light)};
 
 
 

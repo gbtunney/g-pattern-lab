@@ -1,3 +1,41 @@
+{% raw %}
+<h2>Button List</h2>
+    <div class="g-Button-Group">
+        <ol>
+            <!--
+              Now we provide each todo-item with the todo object
+              it's representing, so that its content can be dynamic.
+              We also need to provide each component with a "key",
+              which will be explained later.
+            -->
+            <g-Button
+                    v-for="item in buttonList"
+                    v-bind:button="item"
+                    v-bind:key="item.text">
+            </g-Button>
+        </ol>
+    </div>
+
+    {% endraw %}
+
+{% raw %}
+        <div id="app-5">rebverse
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+    {% endraw %}
+
+{% raw %}
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+{% endraw %}
+
+
 <div class="o-container-vlist-natural-children-width">
     {% for key, value in render_component_themes %}
 
@@ -9,6 +47,7 @@
 
                 {% include data.pattern  with  newdata %}
                 {% include 'elements-toggler'  with  {'guid':  guid } %}
+
 
                     <hr>
             </div>

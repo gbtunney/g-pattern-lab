@@ -1,5 +1,5 @@
 var $ = require('jquery');
-var ljs = require('list.js');
+var ListJS = require('list.js');
 
 var cssSelectors = require('./css-selectors.json');
 var cssSelectorDump = cssSelectors['simpleSelectors']['classes'];
@@ -85,7 +85,7 @@ module.exports = {
         
         for (i = 0; i < cssSelectorDump.length; i++) {
             var classTrimmed = trimClassName(cssSelectorDump[i]);
-            console.log(classTrimmed);
+            //console.log(classTrimmed);
             // output+= `<li><h3 class="name">${cssSelectorDump[i]}</h3><p class="born">1986${i}</p></li>`
             output += `<li><input type="checkbox" id="cssToggler__checkbox-${guid}-${i}"  data-guid="${guid}" value="${classTrimmed}"/> <label name="name" class="name" for="cssToggler__checkbox-${guid}-${i}">${classTrimmed}</label></li>`;
         }
@@ -96,7 +96,9 @@ module.exports = {
             valueNames: ['name']
         };
         
-        var userList = new List(`cssToggler--${guid}`, options);
+        var toggleList = new ListJS(`cssToggler--${guid}`, options);
         $(target).css("border", "1px solid red");
+    
+       // cssToggler__filter data-searc
     }
 };

@@ -1,9 +1,15 @@
-<select multiple size="25" class="g-CSS-toggler" data-css-toggle-id="{{ guid }}">
+<div class="cssToggler" id="cssToggler--{{ guid }}" data-css-toggle-target="{{ guid }}">
+    <!-- class="search" automagically makes an input a search field. -->
+    <input class="search cssToggler__search" placeholder="Search" />
+    <!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
+    <button class="sort cssToggler__sort" data-sort="name">
+        Sort
+    </button>
 
-    {% for selector in simpleSelectors.classes %}
-    {% if selector starts with '.g-Bu' or selector starts with '.u-' or selector starts with '.--'  %}
-        <option value="{{ selector | trim('.', 'left') }}">{{ selector | trim('.', 'left')}}</option>
-    {% endif %}
-    {% endfor %}
+    <ul class="list cssToggler__list">
 
-</select>
+    </ul>
+
+</div>
+
+

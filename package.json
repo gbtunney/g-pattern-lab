@@ -8,16 +8,25 @@
     "copy-webfont": "cp -a node_modules/@fortawesome/fontawesome-free/webfonts/. source/fonts/",
     "styles": "node-sass -r --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch -rw source/css/style.scss source/css/style.css",
     "audit": "list-selectors source/css/style.css > source/_data/css-selectors.json -pretty",
-    "lint": "jsonlint-cli source/_data/config.json"
+    "lint": "jsonlint-cli source/_data/config.json",
+    "build-js": "browserify source/js/vendor/vendor.js -o source/js/vendor.js",
+    "watch-js": "watchify --debug source/js/vendor/vendor.js -o source/js/vendor.js -v"
   },
   "author": "Gillian Tunney",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.0",
+    "fitvids": "^2.0.0",
+    "jquery": "^3.3.1",
+    "list.js": "^1.5.0",
+    "modernizr": "^3.6.0",
     "node-sass": "^4.9.2",
     "node-sass-json-importer": "^3.3.1",
     "ramda": "^0.25.0",
-    "vue": "^2.5.17"
+    "swiper": "^4.3.5",
+    "uniq": "^1.0.1",
+    "vue": "^2.5.17",
+    "watchify": "^3.11.0"
   },
   "watch": {
     "test": "{src,test}/*.js"
@@ -36,10 +45,6 @@
     "npm-watch": "^0.3.0",
     "sass-bem-constructor": "^1.1.0",
     "sass-dry": "^1.0.0",
-    "sass-toolkit": "^2.10.2",
-    "vue": "^2.5.17"
-  },
-  "browser": {
-    "vue": "vue/dist/vue.common.js"
+    "sass-toolkit": "^2.10.2"
   }
 }

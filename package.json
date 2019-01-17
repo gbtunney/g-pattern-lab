@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy-webfont": "cp -a node_modules/@fortawesome/fontawesome-free/webfonts/. source/fonts/",
-    "styles": "node-sass -r --importer node_modules/node-sass-json-importer/dist/node-sass-json-importer.js --watch -rw source/css/style.scss source/css/style.css",
+    "styles": "node-sass  -r --watch -rw --include-path node_modules  --watch -rw source/css/style.scss source/css/style.css",
+    "styles-importer": "node-sass  -r --watch -rw --importer node_modules/node-sass-json-importer/dist/cli.js --include-path node_modules  --watch -rw source/css/style.scss source/css/style.css",
+
     "audit": "list-selectors source/css/style.css > source/_data/css-selectors.json -pretty",
     "lint": "jsonlint-cli source/_data/config.json",
     "build-js": "browserify source/js/vendor/vendor.js -o source/js/vendor.js",
@@ -16,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.0",
+    "faker": "^4.1.0",
     "fitvids": "^2.0.0",
     "jquery": "^3.3.1",
     "list.js": "^1.5.0",
@@ -45,6 +48,7 @@
     "npm-watch": "^0.3.0",
     "sass-bem-constructor": "^1.1.0",
     "sass-dry": "^1.0.0",
-    "sass-toolkit": "^2.10.2"
+    "sass-toolkit": "^2.10.2",
+    "sassytester": "^1.1.0"
   }
 }

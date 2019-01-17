@@ -1,0 +1,222 @@
+@import "../g-Patternlab/dependencies";
+@import "variables";
+
+//todo: fix this
+@import "../g-Patternlab/objects/objects";
+
+@import "../g-Patternlab/modules/core/module";
+@import "../g-Patternlab/modules/colors/module";
+
+@import "../g-Patternlab/modules/sizing/module";
+
+@import "../g-Patternlab/modules/typography/module";
+
+
+@import "../g-Patternlab/modules/rhythm-spacing/module";
+@import "../g-Patternlab/modules/components/module";
+@import "../g-Patternlab/modules/generator/module";
+
+
+$generate-map: (
+    scheme-classes: false,
+    swatch-classes: false,
+    type-classes:false,
+    rhythm-spacing:true,
+    utility-static:false,
+    components:false
+
+);
+
+///@include test-all-dependencies();
+@include init-color-module;
+
+$DEFINITION_MAP: init-sizing-module();
+
+
+///todo: do some kind of check to make sure it is initialized bef
+@include init-generator($generate-map);
+
+
+$scale-map2: (
+    (key:icon,
+        transform: rs,
+        options: (base:10px
+        ), ///  option is direct base value gets multipled by unit below
+        units: (
+            xxs: -2,
+            xs: -1,
+            sm: 0,
+            md: 1,
+            lg: 2,
+            xl: 3,
+            xxl: 4,
+            xxxl: 5
+        )
+    ), (
+        key: fixed-size-icon,
+        transform: fixedval, ///no multipliers.
+        options: 20px, ///thread is for modular scale
+        units: (
+            sm: 20px,
+            md: 50px,
+            lg: 100px
+        )
+    )
+);
+
+$scale-map4: (
+    (key:icon,
+        transform: rs,
+        options: (base:10px
+        ), ///  option is direct base value gets multipled by unit below
+        units: (
+            xxs: -2,
+            xs: -1,
+            sm: 0,
+            md: 1,
+            lg: 2,
+            xl: 3,
+            xxl: 4,
+            xxxl: 5
+        )
+    ), (
+        key: fixed-si4ze-icon,
+        transform: fixedval, ///no multipliers.
+        options: 20px, ///thread is for modular scale
+        units: (
+            sm: 20px,
+            md: 50px,
+            lg: 100px
+        )
+    )
+);
+
+$scale-map3: (key:icon44,
+    transform: rs,
+    options: (base:10px
+    ), ///  option is direct base value gets multipled by unit below
+    units: (
+        xxs: -2,
+        xs: -1,
+        sm: 30,
+        md: 21,
+        lg: 2,
+        xl: 3,
+        xxl: 4,
+        xxxl: 5
+    )
+);
+
+@function get-font-arr($args...){
+    @return $args;
+}
+////test font map
+$new-font-scale: (
+    transform: false,
+    key: newfont,
+    options: (
+        size-scale: type,
+        text-transform: none,
+        text-decoration: none,
+        letter-spacing: 0,
+        word-spacing: -1px,
+        font-weight: normal,
+        font-style: normal
+    ),
+    units: (
+        default:(
+            font-family: monospace
+        ),
+
+        font-san-serif: (
+            font-family: "cronos-pro-display",
+            letter-spacing:0px,
+            title: 'Primary: Mr Eaves Sans'
+        ),
+        font-serif:(
+            font-family: "adobe-garamond-pro",
+            title: 'Secondary, Headers : Mrs Eaves'
+        ),
+        font-serif-italic: (
+
+            font-family: "adobe-garamond-pro",
+            title: 'italic serif',
+            font-style: italic
+        ),
+        font-serif-bold:(
+            font-family: "adobe-garamond-pro",
+            title: "'bold serif'",
+            font-weight: 700
+        ),
+        font-small-caps:(
+            font-family: "adobe-garamond-pro",
+            text-transform: "uppercase",
+            title: 'Accent, Small Caps : Mrs Eaves Roman Small Caps'
+        )
+    )
+);
+
+
+$DEFINITION_MAP: add-definition-map($new-font-scale,font);
+$TEST-ARR: get-rendered-definition(newfont);
+
+
+//@include new-generate-utility-classes($TEST-ARR, test);
+
+
+
+//$DEFINITION_MA                xxs: -2,P: add-definition-map(map-values(init-font-maps($font-maps,$default-font-map)),type);
+//@debug #{$DEFI                xs: -1,NITION_MAP};
+
+//@debug "light                 md: 1,#{color(accent-default,foreground)}";
+//@debug "invert                lg: 2,ed #{color(dark-accent-default,foreground)}";
+//@debug "invert                xl: 3,ed #{color(dark-accent-default,background)}";
+
+@function multiply-by($value, $multiplier: 1){
+    @return $value * $multiplier;
+}
+
+.TESTME{            
+    //@include rhythm-spacing(padding,rs,2,(base:60px));
+
+    $value : if( (11 > 1), "bigger!", "smaller");
+// sizing-key-to-value(sm 30px sm, (sm:140px ) )
+    $_units: (
+        xxs: -2,
+        xs: -1,
+        sm: 0,
+        md: 1,
+        lg: 2,
+        xl: 3,
+        xxl: 4,
+        xxxl: 5
+    );
+    /*
+
+    $args: (
+        _sourceArr:$_units,
+        _transform-func:multiply-by,
+        _options:(multiplier: 300),
+        _map-key-var:value
+    );
+    */
+
+    ///2 working examples ---
+//$newval : transform-each(-4, false , (multiplier: 300),value);
+ //   $newval : transform-by-list(2 sm,$_units,false, (multiplier: 300px),value);
+
+
+
+ ///   @debug "TEST VALUE::::::::: #{$newval}";
+
+//@debug "TESTOMGGGGG #{ sizing-key-to-value(sm 30px md, (sm:140px ),only-auto ) }";
+
+    //@debug "TESTOMGGGGG #{ sizing-key-to-value(sm 30px md, (sm:140px ),only-auto ) }";
+   //@include rhythm-spacing(padding,icon,sm lg md md);
+
+}
+
+
+//@debug get-scheme-colors-list(alt-light);
+
+

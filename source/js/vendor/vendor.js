@@ -1,77 +1,57 @@
-
-const number = 42;
-
-var unique = require('uniq');
-
 var Vue = require('vue/dist/vue.js');
-
-
-
-
-var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
-
-
-
 var Swiper = require('swiper');
 var $ = require('jquery');
+const faker = require('faker');
 
 //todo: move to custom.
 let toggler = require('./cssToggler');
 
 $(function() {
-    let mySwiper = new Swiper('.swiper-container', { /* ... */ });
+    var randomName = faker.name.findName();
+    buttonDemo();
     
-    Vue.component('todo-item', {
-        props: ['todo'],
-        template: '<li>{{ todo.id }}{{ todo.text }}</li>'
-    })
-    
-    Vue.component('g-Button', {
-        props: ['button'],
-        template: '<h2>Hi</h2>'
-    })
-    
-    
-    var app7 = new Vue({
-        el: '.g-Button-Group',
-        data: {
-            buttonList: [
-                { id: 0,link:'http://google.com', label: 'Vegetables' },
-                { id: 1,link:'http://yahoo.com',  label: 'Cheese' },
-                { id: 1,link:'http://bing.com',  label: 'Cheese' }
-            ]
-        }
-    })
-    
-       var app5 = new Vue({
-        el: '#app-5',
-        data: {
-            message: 'Hello Vue.js!'
-        },
-        methods: {
-            reverseMessage: function () {
-                this.message = this.message.split('').reverse().join('')
+    Vue.component('blog-post', {
+        props: ['title'],
+        data: function () {
+            return {
+                count: 0,
+                isActive: true,
+                message: "hello i am gillian"
             }
-        }
+        },
+        template: '<button v-bind:class="{ active: isActive }" v-on:click="isActive=!isActive" >{{message }} {{ count }} {{ title }}</button>'
     });
-    console.log(app5);
-    
-    /*
-    var app4 = new Vue({
-        el: '#app-4',
-        data: {
-            todos: [
-                { text: 'Learn JavaScript' },
-                { text: 'Learn Vue' },
-                { text: 'Build something awesome' }
-            ]
-        }
-    })*/
-   // toggler.init();
-   
+ //   new Vue({ el: '#components-demo' });
+ 
 });
 
-
+function buttonDemo() {
+    
+    Vue.component('gt-button', {
+    
+        props: {
+            label: String,
+            link: String,
+            scheme: String,
+            styleModifier: String,
+            isActive: Boolean
+        }
+        data: function() {
+            return {
+                count: 0,
+                isActive: true,
+                isDisabled: false,
+                message: "hello i am gillian"
+            }
+        },
+        template: `<div v-on:click="isActive = !isActive" v-bind:class="{ active: isActive, 'disabled': isDisabled }" class="g-Button">
+                    <a class="g-Button__link" v-bind:href="link" >{{ label }}</a>
+                    </div>`
+    });
+    
+    new Vue({el: '#button-demo'});
+    
+}
 function init() {
     console.log("hellow");
     if (cache.$hero.length) {
@@ -89,12 +69,8 @@ function init() {
         console.info(hero);
         
     }
-    
 }
 
 module.exports = function() {
-    console.log("swiper init" + $);
-    
     return init();
-    
 };

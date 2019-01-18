@@ -21,7 +21,7 @@ $generate-map: (
     scheme-classes: false,
     swatch-classes: false,
     type-classes:false,
-    rhythm-spacing:true,
+    rhythm-spacing:false,
     utility-static:false,
     components:false
 
@@ -113,7 +113,7 @@ $scale-map3: (key:icon44,
 ////test font map
 $new-font-scale: (
     transform: false,
-    key: newfont,
+    key: font,
     options: (
         size-scale: type,
         text-transform: none,
@@ -158,14 +158,136 @@ $new-font-scale: (
 
 
 $DEFINITION_MAP: add-definition-map($new-font-scale,font);
-$TEST-ARR: get-rendered-definition(newfont);
-
+//$TEST-ARR: get-rendered-definition(font);
 
 //@include new-generate-utility-classes($TEST-ARR, test);
 
 
+//* NEW START
 
-//$DEFINITION_MA                xxs: -2,P: add-definition-map(map-values(init-font-maps($font-maps,$default-font-map)),type);
+$new-type-scale-map: (
+    (
+        key:type, ///might not be needed if it doesnt need to look anything up
+        render:(
+            module:size,//dont know??
+            prefix: newtype, //if it is to be generated, use a class prefix before,
+        props: 'font-size'
+        ),
+        transform: ms,
+        options: (
+            base:36px,
+            ratio:1.4
+        ), ///option is the thread is for modular scale
+        units: (
+            xxs: -2,
+            xs: -1,
+            sm: 2,
+            md: 1,
+            lg: 2,
+            xl: 3,
+            xxl: 4,
+            xxxl: 5
+        )
+    )
+);
+
+$new-font--map: (
+    (
+        render:(
+            module:size, //dont know??
+            prefix: newtype, //if it is to be generated, use a class prefix before,
+            props: (
+                font-family,
+                letter-spacing,
+                word-spacing,
+                text-transform,
+                text-decoration,
+                font-style,
+                font-weight
+            ),
+        ),
+        transform: false,
+        key: font,
+        options: (
+            size-scale: type,
+            text-transform: none,
+            text-decoration: none,
+            letter-spacing: 10000px,
+            word-spacing: -1px,
+            font-weight: normal,
+            font-style: normal
+        ),
+        units: (
+            default:(
+                font-family: monospace
+            ),
+            font-san-serif: (
+                font-family: "cronos-pro-display",
+                letter-spacing:0px,
+                title: 'Primary: Mr Eaves Sans'
+            ),
+            font-serif:(
+                font-family: "adobe-garamond-pro",
+                title: 'Secondary, Headers : Mrs Eaves'
+            ),
+            font-serif-italic: (
+                font-family: "adobe-garamond-pro",
+                title: 'italic serif',
+                font-style: italic
+            ),
+            font-serif-bold:(
+                font-family: "adobe-garamond-pro",
+                title: "'bold serif'",
+                font-weight: 700
+            ),
+            font-small-caps:(
+                font-family: "adobe-garamond-pro",
+                text-transform: "uppercase",
+                title: 'Accent, Small Caps : Mrs Eaves Roman Small Caps'
+            ),
+            font-test:(
+                font-family: "adobe-garamond-pro",
+                text-transform: "testing",
+                title: "testing"
+            )
+        ),
+    )
+);
+
+
+// With `map-deep-set`
+
+
+
+$rendered-data: transform-data($new-type-scale-map...);
+//@debug $rendered-data;
+//$DEFINITION_MAP: add-definition-map($new-type-scale-map,type);
+//$TEST-ARR: get-rendered-definition(type);
+
+
+
+
+//*@debug $rendered-data;
+
+//@error transform-data($new-font--map...);
+@include render-data-obj(transform-data($new-font--map...),map-get($new-font--map,render)...);
+
+
+
+
+
+///END
+
+.gillian {
+   // @include rhythm-spacing(padding, $TEST-ARR,  lg);
+}
+
+//@include new-generate-utility-classes($TEST-ARR, gilliantest);
+
+//@debug $TEST-ARR;
+///add-definition-map(map-values(init-font-maps($font-maps,$default-font-map)),type);
+
+//$DEFINITION_MAxxs: -2,P: add-definition-map(map-values(init-font-maps($font-maps,$default-font-map)),type);
 //@debug #{$DEFI                xs: -1,NITION_MAP};
 
 //@debug "light                 md: 1,#{color(accent-default,foreground)}";
@@ -176,8 +298,8 @@ $TEST-ARR: get-rendered-definition(newfont);
     @return $value * $multiplier;
 }
 
-.TESTME{            
-    //@include rhythm-spacing(padding,rs,2,(base:60px));
+.TESTME{
+    //
 
     $value : if( (11 > 1), "bigger!", "smaller");
 // sizing-key-to-value(sm 30px sm, (sm:140px ) )
